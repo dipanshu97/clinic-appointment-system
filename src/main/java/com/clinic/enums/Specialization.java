@@ -1,0 +1,14 @@
+package com.clinic.enums;
+
+public enum Specialization {
+    GENERAL_PHYSICIAN,
+    CARDIOLOGIST,
+    DERMATOLOGIST,
+    ORTHOPEDIC,
+    PEDIATRICIAN,
+    NEUROLOGIST,
+    GYNECOLOGIST,
+    DENTIST,
+    OPHTHALMOLOGIST,
+    PSYCHIATRIST
+}
