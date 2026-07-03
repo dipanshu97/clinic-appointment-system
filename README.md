@@ -2,7 +2,7 @@
 
 > A secure, scalable backend system for managing clinic appointments built with Java, Spring Boot, REST APIs, Redis caching, and Spring Security.
 
----
+----
 
 ## 📌 Overview
 
