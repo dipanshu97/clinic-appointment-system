@@ -22,31 +22,31 @@ A production-grade backend system that handles the complete lifecycle of clinic 
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                   REST Client                    │
-│              (Postman / Frontend)                │
+│                   REST Client                   │
+│              (Postman / Frontend)               │
 └──────────────────────┬──────────────────────────┘
                        │
 ┌──────────────────────▼──────────────────────────┐
-│              Spring Security Layer               │
-│         (Role-based: Admin/Doctor/Patient)       │
+│              Spring Security Layer              │
+│         (Role-based: Admin/Doctor/Patient)      │
 └──────────────────────┬──────────────────────────┘
                        │
 ┌──────────────────────▼──────────────────────────┐
-│                  Controllers                     │
-│    PatientController | DoctorController          │
-│         AppointmentController                    │
+│                  Controllers                    │
+│    PatientController | DoctorController         │
+│         AppointmentController                   │
 └──────────────────────┬──────────────────────────┘
                        │
 ┌──────────────────────▼──────────────────────────┐
-│                   Services                       │
-│  PatientService | DoctorService                  │
-│         AppointmentService                       │
-│  (Chain of Responsibility Validation Pipeline)   │
-└──────┬──────────────────────────────┬────────────┘
+│                   Services                      │
+│  PatientService | DoctorService                 │
+│         AppointmentService                      │
+│  (Chain of Responsibility Validation Pipeline)  │
+└──────┬──────────────────────────────┬───────────┘
        │                              │
 ┌──────▼──────┐                ┌──────▼──────┐
 │  MySQL DB   │                │ Redis Cache │
-│  (JPA/ORM) │                │  (5 min TTL)│
+│  (JPA/ORM)  │                │  (5 min TTL)│
 └─────────────┘                └─────────────┘
 ```
 
